@@ -31,12 +31,9 @@ public class Restaurant {
 
     public void addReview(String body, String author, int stars) {
         this.review.add(new Review(body, author, stars));
-        int currentSize = this.review.size();
-        int currentReviewStars = this.review.get(currentSize-1).stars;
+//        int currentSize = this.review.size();
+//        int currentReviewStars = this.review.get(currentSize-1).stars;
         calcRestaurantStars();
-        //this.stars = Math.round(((this.stars * (this.review.size()-1)) + this.review.get(this.review.size()-1).stars)/this.review.size());
-        //this.stars = Math.round(((this.stars * (currentSize-1)) + currentReviewStars)/currentSize);
-        //this.stars = Math.ceil(((this.stars * temp1-1) + temp)/temp1);
     }
 
     public void calcRestaurantStars(){
@@ -46,7 +43,6 @@ public class Restaurant {
             i++;
         }
         this.stars = Math.round(sum/this.review.size());
-        //return stars;
     }
 
 }

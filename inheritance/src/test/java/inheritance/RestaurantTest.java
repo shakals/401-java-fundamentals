@@ -17,15 +17,12 @@ public class RestaurantTest {
         cheeseCakeFactory = new Restaurant("Cheesecake Factory", 3);
         redRobin = new Restaurant("Red Robin", 2);
         mcDonalds = new Restaurant("McDonald's", 1);
-
-        //assertNull("Restaurant constructor should not return anything", classUnderTest);
-        //assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
     }
 
     @Test
     public void testAddReview() {
         testRestaurant();
-        //cheeseCakeFactory = new Restaurant("Cheesecake Factory", 3);
+
         cheeseCakeFactory.addReview("I love this restaurant!", "Shan", 5);
         cheeseCakeFactory.addReview("It's ok!", "Bryan", 3);
         cheeseCakeFactory.addReview("I hate it", "Nick", 1);
@@ -59,6 +56,4 @@ public class RestaurantTest {
         assertNotNull("Restaurant Class 'toString' method should return details about the restaurant", test);
         System.out.println(test);
     }
-
-
 }

@@ -10,4 +10,9 @@ public class Review {
         this.author = author;
         this.stars = stars;
     }
+
+    public String toString() {
+        String output = "User " + this.author + " rated the restaurant with " + this.stars + " stars and provided the following review: \n " + this.body;
+        return output;
+    }
 }
